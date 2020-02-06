@@ -16,3 +16,6 @@ gradle
 *.iml
 *.ipr
 *.log
+
+### MAC ###
+.DS_Store
