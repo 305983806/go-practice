@@ -1,0 +1,18 @@
+# Binaries, plugins, libs
+*.dll
+*.dylib
+*.exe
+*.exe~
+*.so
+
+# Testing
+*.test
+*.tmp
+
+### IntelliJ IDEA ###
+.idea
+gradle
+*.iws
+*.iml
+*.ipr
+*.log
