@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 /*
 defer后面的函数在defer语句所在的函数执行结束的时候前才会被调用
@@ -9,6 +11,7 @@ defer后面的函数在defer语句所在的函数执行结束的时候前才会�
 */
 func main() {
 	sample1()
+	sample3()
 }
 
 
@@ -23,4 +26,19 @@ func sample1() {
 func sample2() {
 	//file.Open("file.txt")
 	//defer file.Close()
+}
+
+// defer在匿名函数的应用
+func sample3() {
+	defer func() {
+		fmt.Println("After defer 1")
+	}()
+
+	// 等价于
+	//f := func() {
+	//	fmt.Println("After defer 2")
+	//}
+	//defer f()
+
+	fmt.Println("Before defer")
 }
